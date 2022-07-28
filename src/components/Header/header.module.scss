@@ -1,0 +1,13 @@
+.header {
+  height: 70px;
+  background-color: var(--main-color);
+  width: 100vw;
+  padding: 8px;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+
+  img {
+    height: 48px;
+  }
+}

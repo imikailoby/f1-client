@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders without crashing 1`] = `
+<div>
+  <footer
+    class="footer"
+  >
+    <p>
+      F1 Client © 2022
+    </p>
+  </footer>
+</div>
+`;

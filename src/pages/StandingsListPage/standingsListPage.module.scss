@@ -1,0 +1,21 @@
+@use '../../styles/variables.scss'as v;
+
+.loader {
+  width: 100vw;
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+}
+
+.list {
+  width: 100vw;
+  max-width: var(--max-content-width-xl);
+  margin-inline: auto;
+  padding: 0 8px;
+  flex-grow: 1;
+  transition: max-width .2s ease-in-out;
+
+  @media screen and (max-width: v.$bp-mobile) {
+    max-width: var(--max-content-width-mb);
+  }
+}

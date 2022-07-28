@@ -1,0 +1,36 @@
+:root {
+  --main-color: #E10600;
+  --dark-color: #000;
+  --light-color: #FFF;
+  --gray-color: #dad7d7;
+
+  --bg-color: #f3f3f3;
+  --overlay-color: rgba(60, 60, 67, 0.3);
+
+  --max-content-width-xl: 920px;
+  --max-content-width-mb: 480px;
+
+  --bs-inset: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  --bs-regular: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-color);
+  background-color: var(--bg-color);
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 50px;
+  grid-gap: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+b {
+  font-weight: bold;
+}

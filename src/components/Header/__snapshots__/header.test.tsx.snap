@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders without crashing 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <img
+      alt="f1 logo"
+      loading="lazy"
+      src="svg>
+"
+    />
+  </header>
+</div>
+`;

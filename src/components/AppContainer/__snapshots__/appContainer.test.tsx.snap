@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppContainer /> renders without crashing 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <img
+      alt="f1 logo"
+      loading="lazy"
+      src="svg>
+"
+    />
+  </header>
+  <div
+    class="loader"
+  >
+    <div
+      class="loader"
+    >
+      <img
+        alt="loader"
+        src="svg>
+"
+      />
+    </div>
+  </div>
+  <footer
+    class="footer"
+  >
+    <p>
+      F1 Client © 2022
+    </p>
+  </footer>
+</div>
+`;

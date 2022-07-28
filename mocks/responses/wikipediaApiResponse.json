@@ -1,0 +1,24 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "normalized": [
+      {
+        "from": "Sebastian_Vettel",
+        "to": "Sebastian Vettel"
+      }
+    ],
+    "pages": {
+      "6437759": {
+        "pageid": 6437759,
+        "ns": 0,
+        "title": "Sebastian Vettel",
+        "thumbnail": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sebastian_Vettel_2015_Malaysia_podium_1.jpg/66px-Sebastian_Vettel_2015_Malaysia_podium_1.jpg",
+          "width": 66,
+          "height": 100
+        },
+        "pageimage": "Sebastian_Vettel_2015_Malaysia_podium_1.jpg"
+      }
+    }
+  }
+}

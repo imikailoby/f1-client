@@ -5,4 +5,4 @@ export type MRData<T = unknown> = T & {
   total: string;
   url: string;
   xmlns: string;
-}
+};

@@ -1,0 +1,121 @@
+@use '../../styles/variables.scss' as v;
+
+.table {
+  width: 100%;
+
+  .row {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    grid-gap: 0;
+    border: solid var(--gray-color);
+    border-width: 0 1px 1px;
+
+    > div {
+      padding: 8px;
+      align-self: center;
+
+      p,
+      a {
+        text-align: left;
+        font-size: 14px;
+        line-height: 18px;
+        display: block;
+        color: var(--dark-color);
+        width: max-content;
+      }
+
+      a {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: var(--main-color);
+        }
+      }
+
+      span {
+        display: block;
+        text-transform: capitalize;
+        color: var(--dark-color);
+        font-size: 14px;
+        line-height: 18px;
+        opacity: 0.4;
+      }
+
+      &:first-child p {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    &:first-child {
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
+
+      > div {
+        background-color: var(--gray-color);
+        height: 34px;
+
+        p {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+
+    &.champion {
+      > div {
+        p,
+        a {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: v.$bp-mobile) {
+  .table {
+    .row {
+      grid-template-columns: 1fr;
+      margin-bottom: 16px;
+      border-width: 1px;
+      border-radius: 4px;
+
+      &:first-child {
+        display: none;
+      }
+
+      > div {
+        &::before {
+          content: attr(data-text);
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: bold;
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin-bottom: 4px;
+          color: var(--main-color);
+        }
+
+        &:first-child {
+          &::before {
+            margin-bottom: 0;
+            display: inline;
+            margin-right: 8px;
+          }
+
+          p {
+            display: inline;
+            width: max-content;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

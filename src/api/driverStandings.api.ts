@@ -8,7 +8,7 @@ export const driverStandingsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
   tagTypes: ['DriverStandings'],
   endpoints: (builder) => ({
-    getDriverStandings: builder.query<IGetDriverStandings, { limit: number, offset: number }>({
+    getDriverStandings: builder.query<IGetDriverStandings, { limit: number; offset: number }>({
       query: (params) => ({ url: 'driverstandings/1.json', params }),
       providesTags: ['DriverStandings'],
       transformResponse: (response: IGetDriverStandingsResponse) => transformGetDriverStandingsApiResponse(response),

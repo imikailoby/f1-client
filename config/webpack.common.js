@@ -24,18 +24,14 @@ module.exports = /** @type { import('webpack').Configuration } */ ({
         test: /\.tsx?$/,
         use: ['babel-loader', 'ts-loader'],
         include: appPath,
-        exclude: [
-          /[\\/]node_modules[\\/]/,
-          /[\\/]config[\\/]/,
-          /[\\/]mocks[\\/]/,
-        ],
+        exclude: [/[\\/]node_modules[\\/]/, /[\\/]config[\\/]/, /[\\/]mocks[\\/]/],
       },
       {
         test: /\.(ico|svg|png)$/,
         type: 'asset/resource',
         exclude: /[\\/]node_modules[\\/]/,
       },
-    ]
+    ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],

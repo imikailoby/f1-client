@@ -18,5 +18,5 @@ export interface Race {
   };
   date: string;
   time: string;
-  Results: Result[];
+  Results: [Result];
 }

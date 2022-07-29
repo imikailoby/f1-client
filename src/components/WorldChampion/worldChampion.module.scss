@@ -1,0 +1,101 @@
+@use '../../styles/variables.scss' as v;
+
+.champion {
+  width: 100%;
+  border: solid var(--main-color);
+  border-width: 0 0 1px 1px;
+  border-radius: 0 0 0 4px;
+  padding: 16px;
+
+  .driver {
+    grid-area: driver;
+    display: grid;
+    grid-template-columns: 60px 1fr max-content;
+    grid-gap: 4px 16px;
+    grid-template-areas:
+      'avatar name link'
+      'avatar car link';
+
+    .avatar {
+      grid-area: avatar;
+    }
+
+    .name {
+      grid-area: name;
+      color: var(--dark-color);
+      align-self: flex-end;
+      display: inline;
+      text-transform: capitalize;
+      font-size: 16px;
+      line-height: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      b {
+        color: var(--main-color);
+        text-transform: uppercase;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+
+    .car {
+      grid-area: car;
+      align-self: flex-start;
+      color: var(--dark-color);
+      opacity: 0.4;
+      width: max-content;
+      text-transform: capitalize;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .link {
+      // import wikiIcon from '../../assets/icons/wikipedia.svg';
+      grid-area: link;
+      align-self: center;
+      cursor: pointer;
+      color: var(--dark-color);
+      font-size: 14px;
+      line-height: 18px;
+
+      &::before {
+        content: url('../../assets/icons/wikipedia.svg');
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-right: 8px;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: var(--main-color);
+      }
+    }
+  }
+
+  @media screen and (max-width: v.$bp-mobile) {
+    .driver {
+      grid-template-columns: 48px 1fr;
+      grid-template-areas:
+        'avatar name'
+        'avatar car'
+        'link link';
+
+      .name {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .car {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .link {
+        margin-top: 16px;
+      }
+    }
+  }
+}

@@ -3,10 +3,7 @@
     "target": "es2017",
     "outDir": "./build/",
     "noImplicitAny": true,
-    "lib": [
-      "dom",
-      "es2020",
-    ],
+    "lib": ["dom", "es2020"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,12 +15,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   },
-  "include": [
-    "src",
-    "src/custom.d.ts",
-    "setupTests.ts",
-    "mocks"
-  ]
+  "include": ["src", "src/custom.d.ts", "setupTests.ts", "mocks"]
 }

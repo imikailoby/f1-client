@@ -7,7 +7,7 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test))\\.(jsx?|tsx?)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'node'],
   moduleNameMapper: {
-    '\\.(css|scss)$': 'identity-obj-proxy'
+    '\\.(css|scss)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts', 'mock-local-storage'],
 };

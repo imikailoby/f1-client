@@ -2,14 +2,14 @@ import { rest } from 'msw';
 import { resultsApi } from '../results.api';
 import { setupTestApiStore } from '../../utils/setupTestApiStore';
 import { server } from '../../../mocks/server';
-import getResultsByYearResponse from '../../../mocks/responses/getResultsByYearResponse.json';
-import { transformGetResultsByYearResponse } from '../../helpers/api.helpers';
-import { IGetResultsByYearResponse } from '../../interfaces/api';
+import getResultsBySeasonResponse from '../../../mocks/responses/getResultsBySeasonResponse.json';
+import { transformGetResultsBySeasonResponse } from '../../helpers/api.helpers';
+import { IGetResultsBySeasonResponse } from '../../interfaces/api';
 import { API_URL } from '../../constants';
 
 const storeRef = setupTestApiStore(resultsApi);
 
-const MOCKED_PARAMS = { year: '2005' };
+const MOCKED_PARAMS = { season: '2005' };
 
 beforeAll(() => server.listen());
 afterEach(() => {
@@ -19,39 +19,33 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe('Results API', () => {
-  describe('getResultsByYear()', () => {
+  describe('getResultsBySeason()', () => {
     test('successful response', () => {
       server.use(
-        rest.get(`${API_URL}/${MOCKED_PARAMS.year}/results/1.json`, (_, res, ctx) => (
-          res(ctx.status(200), ctx.json(getResultsByYearResponse))
-        )),
-      )
+        rest.get(`${API_URL}/${MOCKED_PARAMS.season}/results/1.json`, (_, res, ctx) =>
+          res(ctx.status(200), ctx.json(getResultsBySeasonResponse)),
+        ),
+      );
 
-      return storeRef.store
-        .dispatch(resultsApi.endpoints.getResultsByYear.initiate(MOCKED_PARAMS)).then((action) => {
-          const { status, data, isSuccess } = action;
-          const formattedResponse = transformGetResultsByYearResponse(
-            Object.assign(getResultsByYearResponse) as IGetResultsByYearResponse
-          );
+      return storeRef.store.dispatch(resultsApi.endpoints.getResultsBySeason.initiate(MOCKED_PARAMS)).then((action) => {
+        const { status, data, isSuccess } = action;
+        const formattedResponse = transformGetResultsBySeasonResponse(
+          Object.assign(getResultsBySeasonResponse) as IGetResultsBySeasonResponse,
+        );
 
-          expect(status).toBe('fulfilled');
-          expect(isSuccess).toBe(true);
-          expect(data).toStrictEqual(formattedResponse);
-        })
-    }),
-
+        expect(status).toBe('fulfilled');
+        expect(isSuccess).toBe(true);
+        expect(data).toStrictEqual(formattedResponse);
+      });
+    });
     test('unsuccessful response', () => {
-      server.use(
-        rest.get(`${API_URL}/${MOCKED_PARAMS.year}/results/1.json`, (_, res, ctx) => res(ctx.status(500))),
-      )
+      server.use(rest.get(`${API_URL}/${MOCKED_PARAMS.season}/results/1.json`, (_, res, ctx) => res(ctx.status(500))));
 
-      return storeRef.store
-        .dispatch(resultsApi.endpoints.getResultsByYear.initiate(MOCKED_PARAMS)).then((action) => {
-          const { status, isError } = action;
-          expect(status).toBe('rejected');
-          expect(isError).toBe(true);
-        })
-    })
-  })
-}
-);
+      return storeRef.store.dispatch(resultsApi.endpoints.getResultsBySeason.initiate(MOCKED_PARAMS)).then((action) => {
+        const { status, isError } = action;
+        expect(status).toBe('rejected');
+        expect(isError).toBe(true);
+      });
+    });
+  });
+});

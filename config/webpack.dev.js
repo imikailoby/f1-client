@@ -19,7 +19,7 @@ module.exports = /** @type { import('webpack').Configuration } */ merge(common, 
       {
         test: /\.(css|s[ac]ss)$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-      }
-    ]
-  }
+      },
+    ],
+  },
 });

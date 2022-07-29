@@ -6,14 +6,14 @@ import { useEffect } from 'react';
 export const AppContainer = () => {
   const onUnload = () => {
     sessionStorage.clear();
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('beforeunload', onUnload);
     return () => {
       window.removeEventListener('beforeunload', onUnload);
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <>
@@ -21,7 +21,7 @@ export const AppContainer = () => {
       <StandingsListPage />
       <Footer />
     </>
-  )
+  );
 };
 
 export default AppContainer;

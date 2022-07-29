@@ -3,10 +3,7 @@ import { driverStandingsApi } from '../api/driverStandings.api';
 import { resultsApi } from '../api/results.api';
 import { CURRENT_ENV } from '../constants';
 
-const apiMiddlewares = [
-  driverStandingsApi.middleware,
-  resultsApi.middleware,
-];
+const apiMiddlewares = [driverStandingsApi.middleware, resultsApi.middleware];
 
 export const store = configureStore({
   reducer: {

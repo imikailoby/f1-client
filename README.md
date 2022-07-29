@@ -2,15 +2,16 @@
 
 ## Requirements
 
-* node >= 16.5.1
+- node >= 16.5.1
 
-* yarn >= 3.21.1
+- yarn >= 3.21.1
 
 ## Installation
 
 1. Clone the repository and go into it's folder;
 2. Install packages: `yarn`;
-3. Create **.env** (already in `.gitignore`) and paste necessary variables:
+3. Run `yarn postinstall` to install Pre-commit Hooks;
+4. Create **.env** (already in `.gitignore`) and paste necessary variables:
 
 ```zsh
 REACT_APP_API_URL="Paste 'Ergast Developer API' url (with provided series). 'http://ergast.com/api/f1' by default"
@@ -18,30 +19,35 @@ REACT_APP_FROM_F1_SEASON_YEAR="Paste season year, from the beginning of which st
 ```
 
 ## Commands
-#### Start server:
+
+#### Start application:
 
 ```zsh
 yarn start
 ```
 
-#### Build application for staging environment:
+#### Build application for different environments:
+
 ```zsh
 yarn build:staging
-```
-
-#### Build application for production environment:
-```zsh
 yarn build:production
-```
-
-#### Run linters:
-
-```zsh
-yarn lint
 ```
 
 #### Run tests:
 
 ```zsh
 yarn test
+```
+
+#### Run Prettier:
+
+```zsh
+yarn format
+```
+
+#### Run linters:
+
+```zsh
+yarn lint:eslint
+yarn lint:stylelint
 ```

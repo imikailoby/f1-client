@@ -4,5 +4,5 @@ module.exports = {
       browsers: 'last 2 versions',
     }),
   ],
-  modules: true
+  modules: true,
 };

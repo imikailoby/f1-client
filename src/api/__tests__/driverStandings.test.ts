@@ -19,40 +19,38 @@ afterEach(() => {
 afterAll(() => server.close());
 
 describe('Driver Standings API', () => {
-
   describe('getDriverStandings()', () => {
     test('successful response', () => {
       server.use(
-        rest.get(`${API_URL}/driverstandings/1.json`, (_, res, ctx) => (
-          res(ctx.status(200), ctx.json(getDriverStandingsReponse))
-        )),
+        rest.get(`${API_URL}/driverstandings/1.json`, (_, res, ctx) =>
+          res(ctx.status(200), ctx.json(getDriverStandingsReponse)),
+        ),
       );
 
-      return storeRef.store.dispatch(driverStandingsApi.endpoints.getDriverStandings.initiate(MOCKED_PARAMS))
+      return storeRef.store
+        .dispatch(driverStandingsApi.endpoints.getDriverStandings.initiate(MOCKED_PARAMS))
         .then((action) => {
           const { status, data, isSuccess } = action;
           const formattedResponse = transformGetDriverStandingsApiResponse(
-            Object.assign(getDriverStandingsReponse) as IGetDriverStandingsResponse
+            Object.assign(getDriverStandingsReponse) as IGetDriverStandingsResponse,
           );
 
           expect(status).toBe('fulfilled');
           expect(isSuccess).toBe(true);
           expect(data).toStrictEqual(formattedResponse);
-        })
+        });
     });
 
     test('unsuccessful response', () => {
-      server.use(
-        rest.get(`${API_URL}/driverstandings/1.json`, (_, res, ctx) => res(ctx.status(500))),
-      )
+      server.use(rest.get(`${API_URL}/driverstandings/1.json`, (_, res, ctx) => res(ctx.status(500))));
 
-      return storeRef.store.dispatch(driverStandingsApi.endpoints.getDriverStandings.initiate(MOCKED_PARAMS))
+      return storeRef.store
+        .dispatch(driverStandingsApi.endpoints.getDriverStandings.initiate(MOCKED_PARAMS))
         .then((action) => {
           const { status, isError } = action;
           expect(status).toBe('rejected');
           expect(isError).toBe(true);
-        })
-    })
+        });
+    });
   });
-
 });

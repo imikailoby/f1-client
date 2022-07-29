@@ -5,6 +5,6 @@ export interface Driver {
   familyName: string;
   givenName: string;
   nationality: string;
-  permanentNumber: string;
+  permanentNumber?: string;
   url: string;
 }

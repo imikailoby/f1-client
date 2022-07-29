@@ -15,7 +15,8 @@
     "plugin:import/typescript",
     "plugin:react/jsx-runtime",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -25,19 +26,11 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     },
     "react": {
@@ -45,11 +38,7 @@
     }
   },
   "rules": {
-    "quotes": [
-      2,
-      "single",
-      "avoid-escape"
-    ],
+    "quotes": [2, "single", "avoid-escape"],
     "import/extensions": [
       "error",
       {
@@ -66,27 +55,17 @@
         "tabWidth": 2
       }
     ],
-    "indent": [
-      "error",
-      2
-    ],
+    "indent": ["error", 2],
     "no-console": [
       "error",
       {
-        "allow": [
-          "warn",
-          "error"
-        ]
+        "allow": ["warn", "error"]
       }
     ],
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
+    "@typescript-eslint/no-shadow": ["error"],
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error"
-    ],
+    "@typescript-eslint/no-unused-vars": ["error"],
     "no-param-reassign": [
       "error",
       {
@@ -94,17 +73,12 @@
       }
     ],
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
+    "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-var-requires": 0,
     "react/jsx-filename-extension": [
       2,
       {
-        "extensions": [
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".ts", ".tsx"]
       }
     ],
     "react/function-component-definition": [

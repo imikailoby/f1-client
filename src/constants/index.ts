@@ -1,7 +1,8 @@
 export const API_URL: string = process.env.REACT_APP_API_URL || 'http://ergast.com/api/f1';
-export const CURRENT_ENV: 'development' | 'production' | 'test' = (
-  process.env.NODE_ENV || 'development'
-) as 'development' | 'production' | 'test';
+export const CURRENT_ENV: 'development' | 'production' | 'test' = (process.env.NODE_ENV || 'development') as
+  | 'development'
+  | 'production'
+  | 'test';
 
 export const FIRST_F1_SEASON_YEAR = 1950;
 export const FROM_F1_SEASON_YEAR = Number(process.env.REACT_APP_FROM_F1_SEASON_YEAR || '2005');

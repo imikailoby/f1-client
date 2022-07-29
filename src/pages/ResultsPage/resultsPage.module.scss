@@ -1,0 +1,33 @@
+@use '../../styles/variables.scss' as v;
+
+.results {
+  h1 {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+    padding-bottom: 24px;
+    color: var(--dark-color);
+    width: 100%;
+    border-bottom: 1px solid var(--gray-color);
+
+    span {
+      color: var(--main-color);
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin: 24px 0;
+    color: var(--dark-color);
+  }
+
+  .loader {
+    width: 100%;
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    margin: 32px auto;
+  }
+}

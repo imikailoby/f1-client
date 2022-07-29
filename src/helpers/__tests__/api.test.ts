@@ -1,7 +1,7 @@
-import { transformGetDriverStandingsApiResponse, transformGetResultsByYearResponse } from '../api.helpers';
+import { transformGetDriverStandingsApiResponse, transformGetResultsBySeasonResponse } from '../api.helpers';
 import getDriverStandingsReponse from '../../../mocks/responses/getDriverStandingsReponse.json';
-import getResultsByYearResponse from '../../../mocks/responses/getResultsByYearResponse.json';
-import { IGetDriverStandingsResponse, IGetResultsByYearResponse } from '../../interfaces/api';
+import getResultsBySeasonResponse from '../../../mocks/responses/getResultsBySeasonResponse.json';
+import { IGetDriverStandingsResponse, IGetResultsBySeasonResponse } from '../../interfaces/api';
 
 describe('transformGetDriverStandingsApiResponse()', () => {
   test('returns result in expected format', () => {
@@ -13,16 +13,16 @@ describe('transformGetDriverStandingsApiResponse()', () => {
       pagination: {
         limit: response.MRData.limit,
         offset: response.MRData.offset,
-        total: response.MRData.total
-      }
-    })
+        total: response.MRData.total,
+      },
+    });
   });
 });
 
-describe('transformGetResultsByYearResponse()', () => {
+describe('transformGetResultsBySeasonResponse()', () => {
   test('returns result in expected format', () => {
-    const response = Object.assign(getResultsByYearResponse) as IGetResultsByYearResponse;
-    const formattedData = transformGetResultsByYearResponse(response);
+    const response = Object.assign(getResultsBySeasonResponse) as IGetResultsBySeasonResponse;
+    const formattedData = transformGetResultsBySeasonResponse(response);
 
     expect(formattedData).toStrictEqual(response.MRData.RaceTable);
   });

@@ -1,18 +1,52 @@
+@use '../../../styles/variables.scss' as v;
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   width: 100vw;
   height: 100vh;
   background-color: var(--overlay-color);
   z-index: 1;
 
   .wrapper {
-    max-width: 80vw;
-    width: 100%;
+    padding: 36px;
+    background-color: var(--light-color);
+    max-width: var(--max-content-width-xl);
+    width: calc(100vw - 16px);
+    margin-inline: auto;
+    max-height: 90vh;
+    transition: max-width 0.2s ease-in-out;
+    box-shadow: var(--bs-regular);
+    border-radius: 4px;
+    position: relative;
+    overflow-y: auto;
+
+    .close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+
+      img {
+        display: block;
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    @media screen and (max-width: v.$bp-mobile) {
+      max-width: var(--max-content-width-mb);
+      padding: 24px;
+
+      .close {
+        right: 8px;
+        top: 8px;
+      }
+    }
   }
 }

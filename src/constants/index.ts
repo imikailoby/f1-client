@@ -1,5 +1,5 @@
 export const API_URL: string = process.env.REACT_APP_API_URL || 'http://ergast.com/api/f1';
-export const CURRENT_ENV: 'development' | 'production' | 'test' = (process.env.NODE_ENV || 'development') as
+export const CURRENT_ENV: 'development' | 'production' | 'test' = process.env.NODE_ENV as
   | 'development'
   | 'production'
   | 'test';

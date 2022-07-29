@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DriverAvatar /> renders with driver info without crashing 1`] = `
+<div>
+  <div
+    class="avatar test"
+  >
+    <img
+      alt="driver avatar"
+      loading="lazy"
+      src="https://test.com/avatar.png"
+    />
+    <span
+      class="number"
+    >
+      14
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<DriverAvatar /> renders with loading state without crashing 1`] = `
+<div>
+  <div
+    class="avatar undefined"
+  >
+    <span>
+      ...
+    </span>
+    <span
+      class="number"
+    >
+      ??
+    </span>
+  </div>
+</div>
+`;

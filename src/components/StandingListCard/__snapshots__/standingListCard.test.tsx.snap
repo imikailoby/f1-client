@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StandingListCard /> renders with driver info without crashing 1`] = `
+<div>
+  <div
+    class="card "
+    style="margin: 0px;"
+  >
+    <p
+      class="label"
+    >
+      1950
+    </p>
+    <div
+      class="content"
+    >
+      <div
+        class="contentWrapper"
+      >
+        <div
+          class="driver"
+        >
+          <div
+            class="avatar avatar"
+          >
+            <span>
+              ...
+            </span>
+            <span
+              class="number"
+            >
+              N/A
+            </span>
+          </div>
+          <p
+            class="name"
+          >
+            Nino
+             
+            <b>
+              Farina
+            </b>
+          </p>
+          <p
+            class="car"
+          >
+            Alfa Romeo
+          </p>
+        </div>
+        <p
+          class="pts"
+        >
+          30 PTS
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<StandingListCard /> renders with loading state without crashing 1`] = `
+<div>
+  <div
+    class="card last"
+    style="margin: 0px;"
+  >
+    <p
+      class="label"
+    >
+      ...
+    </p>
+    <div
+      class="content"
+    >
+      <div
+        class="contentWrapper"
+      >
+        <div
+          class="driver"
+        >
+          <div
+            class="avatar avatar"
+          >
+            <span>
+              ...
+            </span>
+            <span
+              class="number"
+            >
+              ...
+            </span>
+          </div>
+          <p
+            class="name"
+          >
+            Loading
+             
+            <b>
+              ...
+            </b>
+          </p>
+          <p
+            class="car"
+          >
+            ...
+          </p>
+        </div>
+        <p
+          class="pts"
+        >
+          ...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

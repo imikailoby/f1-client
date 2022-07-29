@@ -2,16 +2,13 @@ import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { StandingsListPage } from '../../pages/StandingsListPage';
 import { useEffect } from 'react';
+import { clearSessionStorage } from '../../utils/common';
 
 export const AppContainer = () => {
-  const onUnload = () => {
-    sessionStorage.clear();
-  };
-
   useEffect(() => {
-    window.addEventListener('beforeunload', onUnload);
+    window.addEventListener('beforeunload', clearSessionStorage);
     return () => {
-      window.removeEventListener('beforeunload', onUnload);
+      window.removeEventListener('beforeunload', clearSessionStorage);
     };
   }, []);
 

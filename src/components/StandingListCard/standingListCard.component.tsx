@@ -20,7 +20,7 @@ export const StandingListCard = memo(function StandingsListCard(props: Props) {
   return (
     <div className={`${styles.card} ${isLastElement ? styles.last : ''}`} style={style}>
       <p className={styles.label}>{driverAndSeasonInfo.season}</p>
-      <div className={styles.content} onClick={() => onClickCallback(item || null)}>
+      <div className={styles.content} onClick={() => onClickCallback(item)}>
         <div className={styles.contentWrapper}>
           <div className={styles.driver}>
             <DriverAvatar

@@ -14,11 +14,9 @@ export const loadAndCacheDriverAvatar = async (
     } else {
       result = cachedImageUrl;
     }
-  } catch (e) {
-    console.warn(e);
   } finally {
-    if (!cachedImageUrl) {
-      sessionStorage.setItem(driverCode, result || '');
+    if (!cachedImageUrl && result) {
+      sessionStorage.setItem(driverCode, result);
     }
     callback(result);
   }

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WorldChampion /> renders without crashing 1`] = `
+<div>
+  <div
+    class="champion"
+  >
+    <div
+      class="driver"
+    >
+      <div
+        class="avatar avatar"
+      >
+        <span>
+          ...
+        </span>
+        <span
+          class="number"
+        >
+          N/A
+        </span>
+      </div>
+      <p
+        class="name"
+      >
+        Nino
+         
+        <b>
+          Farina
+        </b>
+      </p>
+      <p
+        class="car"
+      >
+        Alfa Romeo
+      </p>
+      <a
+        class="link"
+        href="http://en.wikipedia.org/wiki/Nino_Farina"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Read more...
+      </a>
+    </div>
+  </div>
+</div>
+`;

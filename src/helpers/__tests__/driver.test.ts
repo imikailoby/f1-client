@@ -3,12 +3,13 @@ import { server } from '../../../mocks/server';
 import wikipediaApiResponse from '../../../mocks/responses/wikipediaApiResponse.json';
 import { WIKI_API_URL } from '../../constants';
 import { loadAndCacheDriverAvatar } from '../driver.helpers';
+import { clearSessionStorage } from '../../utils/common';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => {
   server.close();
-  sessionStorage.clear();
+  clearSessionStorage();
 });
 
 const MOCKED_URL = 'http://en.wikipedia.org/wiki/Sebastian_Vettel';

@@ -1,5 +1,7 @@
 # F1-client
 
+F1 Seasons statistic powered by [The Ergast Developer API](http://ergast.com/mrd).
+
 ## Requirements
 
 - node >= 16.5.1
@@ -20,7 +22,7 @@ REACT_APP_FROM_F1_SEASON_YEAR="Paste season year, from the beginning of which st
 
 ## Commands
 
-#### Start application:
+#### Start application (3000 port):
 
 ```zsh
 yarn start
@@ -38,6 +40,8 @@ yarn build:production
 ```zsh
 yarn test
 ```
+
+> You can also run `yarn test:coverage` to see current coverage level.
 
 #### Run Prettier:
 

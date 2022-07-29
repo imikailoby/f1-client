@@ -12,7 +12,4 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts', 'mock-local-storage'],
 };
 
-process.env = Object.assign(process.env, {
-  REACT_APP_API_URL: 'http://example.com',
-  REACT_APP_FROM_F1_SEASON_YEAR: '2005',
-});
+process.env = Object.assign(process.env);

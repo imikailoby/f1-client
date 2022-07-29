@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StandingsListPage /> renders with loading state without crashing 1`] = `
+<div>
+  <div
+    class="loader"
+  >
+    <div
+      class="loader"
+    >
+      <img
+        alt="loader"
+        src="svg>
+"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<StandingsListPage /> renders with results without crashing 1`] = `
+<div>
+  <div
+    class="list"
+  >
+    <div
+      style="overflow: visible; height: 0px; width: 0px;"
+    />
+    <div
+      class="resize-triggers"
+    >
+      <div
+        class="expand-trigger"
+      >
+        <div
+          style="width: 1px; height: 1px;"
+        />
+      </div>
+      <div
+        class="contract-trigger"
+      />
+    </div>
+  </div>
+</div>
+`;

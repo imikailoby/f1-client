@@ -52,6 +52,7 @@ export const StandingsListPage = memo(function StandingsListPage() {
   return (
     <>
       <div className={styles.list}>
+        {/* To prevent memory leaks when user wants it all available season winners we use virtualized list. */}
         <AutoSizer>
           {({ height, width }) => (
             <InfiniteLoader

@@ -18,6 +18,7 @@ export const StandingListCard = memo(function StandingsListCard(props: Props) {
   const driverAndSeasonInfo = useMemo(() => getDriverAndSeasonInfo(item), [item]);
 
   return (
+    // We don't add 'line' between years for last element. Because it's the last element ¯\_(ツ)_/¯
     <div className={`${styles.card} ${isLastElement ? styles.last : ''}`} style={style}>
       <p className={styles.label}>{driverAndSeasonInfo.season}</p>
       <div className={styles.content} onClick={() => onClickCallback(item)}>

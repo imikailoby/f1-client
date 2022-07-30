@@ -1,5 +1,6 @@
 import { StandingsListItem } from '../interfaces/standingsLists';
 
+// Decorator to get driver data for UI with loading text if data is not loaded yet.
 export const getDriverAndSeasonInfo = (
   i: StandingsListItem | undefined,
 ): {

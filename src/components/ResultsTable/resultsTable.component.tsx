@@ -9,6 +9,8 @@ interface Props {
 
 const COLUMN_TITLE = { round: 'Round', driver: 'Driver', race: 'Race' };
 
+// We don't use virtualization when map items in this component by one simple reason: season results array cannot
+// have huge amount of items (max 20-25). So, additional optimization it's not necessary.
 export const ResultsTable = ({ data, championCode }: Props) => {
   const isChampion = (d: Driver) => d.code === championCode;
 
@@ -22,6 +24,7 @@ export const ResultsTable = ({ data, championCode }: Props) => {
         ))}
       </div>
       {data.map((race) => (
+        // highlight row (just adding bold text styles) when race winner is the current season world champion.
         <div key={race.round} className={`${styles.row} ${isChampion(race.Results[0].Driver) ? styles.champion : ''}`}>
           <div data-text={COLUMN_TITLE.round}>
             <p>{race.round}</p>

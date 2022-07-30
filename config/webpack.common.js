@@ -1,7 +1,6 @@
 // @ts-check
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 
 const rootPath = path.join(__dirname, '..');
@@ -48,6 +47,5 @@ module.exports = /** @type { import('webpack').Configuration } */ ({
     new Dotenv({
       path: path.join(rootPath, '.env'),
     }),
-    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /ru|en/),
   ],
 });

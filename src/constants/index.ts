@@ -4,6 +4,7 @@ export const CURRENT_ENV: 'development' | 'production' | 'test' = process.env.NO
   | 'production'
   | 'test';
 
+// Value hardcoded because we cannot time traveling and start first F1 season before 1950;
 export const FIRST_F1_SEASON_YEAR = 1950;
 export const FROM_F1_SEASON_YEAR = Number(process.env.REACT_APP_FROM_F1_SEASON_YEAR || '2005');
 

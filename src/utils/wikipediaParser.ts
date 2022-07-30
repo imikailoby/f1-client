@@ -1,5 +1,6 @@
 import { WIKI_API_URL } from '../constants';
 
+// Parse driver url from Wikipedia by driver name and trying to get driver avatar from this page if it is possible
 export const getWikipediaArticleImage = async (url: string): Promise<string | null> =>
   new Promise((resolve) => {
     // eslint-disable-next-line no-useless-escape

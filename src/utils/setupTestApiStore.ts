@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AnyAction, configureStore, EnhancedStore, Middleware, Reducer } from '@reduxjs/toolkit';
 
+// helper to generate a store for testing
 export function setupTestApiStore<
   A extends {
     reducer: Reducer<any, any>;

@@ -4,9 +4,9 @@ F1 Seasons statistic powered by [The Ergast Developer API](http://ergast.com/mrd
 
 ## Requirements
 
-- node >= 16.5.1
+- node >= 16.15.1
 
-- yarn >= 3.21.1
+- yarn >= 3.2.1
 
 ## Installation
 
